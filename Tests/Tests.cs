@@ -30,6 +30,15 @@ namespace Tests
         }
 
         [Theory]
+        [InlineData(41,5)]
+        [InlineData(10,50)]
+        [InlineData(-21,-5)]
+        [InlineData(-18,1)]
+        public void FarenheitToCelcius(int expected,int num)
+        {
+        }
+
+        [Theory]
         [InlineData(false,'A')]
         [InlineData(true,word(5))]
         [InlineData(false,word(10))]
