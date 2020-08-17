@@ -1,10 +1,13 @@
 using System;
 using Xunit;
+using MiscLib;
 
 namespace Tests
 {
     public class MiscLibTests
     {
+
+        
         // Write Unit Tests for all functions for your assigned group
 
         //Theory needs params for the test function
@@ -14,9 +17,11 @@ namespace Tests
         [InlineData(8,-2,-2)]
         [InlineData(20,-5,-5)]
 
-        public void CalcRectPerimeter(int expected, int param2, int param3){
+        public void CalcRectPerimeter(int expected, int length, int width){
             //construct if need to
-
+            var ml = new GroupTwoFunctions();
+            var result = ml.CalcRectArea(length, width);
+            Assert.Equal(result, expected);
         }
 
 
@@ -27,6 +32,9 @@ namespace Tests
         [InlineData(true,91)]
         public void IsTriangularNum(Boolean expected,int num)
         {
+            var ml = new GroupTwoFunctions();
+            var result = ml.CalcRectArea(num);
+            Assert.Equal(result, expected);
         }
 
         [Theory]
@@ -34,8 +42,11 @@ namespace Tests
         [InlineData(10,50)]
         [InlineData(-21,-5)]
         [InlineData(-18,1)]
-        public void FarenheitToCelcius(int expected,int num)
+        public void FarenheitToCelcius(int expected,int farenheit)
         {
+            var ml = new GroupTwoFunctions();
+            var result = ml.CalcRectArea(farenheit);
+            Assert.Equal(result, expected);
         }
 
         [Theory]
@@ -45,6 +56,9 @@ namespace Tests
         [InlineData(true,' ')]
         public void CheckWhiteSpace(Boolean expected,string word)
         {
+            var ml = new GroupTwoFunctions();
+            var result = ml.CalcRectArea(word);
+            Assert.Equal(result, expected);
         }
 
         [Theory]
@@ -53,7 +67,9 @@ namespace Tests
         [InlineData("SuH sUh MaTe","sUh SuH mAtE")]
         public void CamelString(string expected,string word)
         {
-
+            var ml = new GroupTwoFunctions();
+            var result = ml.CalcRectArea(word);
+            Assert.Equal(result, expected);
         }
 
         [Theory]
@@ -62,6 +78,9 @@ namespace Tests
         [InlineData(0,"I dont believe so")]
         public void CountDigits(int expected,string word)
         {
+            var ml = new GroupTwoFunctions();
+            var result = ml.CalcRectArea(word);
+            Assert.Equal(result, expected);
         }
     }
 }
